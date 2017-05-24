@@ -1,0 +1,12 @@
+{
+  "name":"hawkular-$TENANT",
+  "type":"hawkular-datasource",
+  "url":"http://hawkular:8080/hawkular/metrics",
+  "access":"proxy",
+  "basicAuth": true,
+  "basicAuthUser":"jdoe",
+  "basicAuthPassword":"password",
+  "jsonData": {
+    "tenant":"$TENANT"
+  }
+}
