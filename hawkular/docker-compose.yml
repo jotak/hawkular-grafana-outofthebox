@@ -19,7 +19,7 @@ services:
     environment:
       - CASSANDRA_START_RPC=true
   grafana:
-    image: "hawkular/hawkular-grafana-datasource:latest"
+    image: "hawkular/hawkular-grafana-datasource:resolve-vars-annots"
     ports:
       - "3000:3000"
   bootstrap:
