@@ -25,5 +25,9 @@ services:
   bootstrap:
     image: "jotak/hawkular-grafana-bootstrap:latest"
     environment:
-      - TENANT=falco
-      - DASHBOARDS=vertx-hwk falco
+      - TENANT=cpudemo
+      - DASHBOARDS=cpudemo
+  cpudemo:
+    image: "jotak/hawkular-grafana-cpudemo:latest"
+    environment:
+      - TENANT=cpudemo

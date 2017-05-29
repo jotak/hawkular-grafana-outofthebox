@@ -6,7 +6,7 @@ that provides an almost immediate setup of Hawkular+Grafana combo.
 ## Usage
 
 Edit the docker-compose file 'bootstrap' section, by setting the tenant you want to use and the dashboard templates you want to setup in Grafana.
-Dashboard templates are located in the `dashboards` directory. You can put several of them, separated by space.
+Dashboard templates are located in the `dashboards` directory. You can put several of them (just put the file name without extension), separated by space.
 
 Example:
 
@@ -37,4 +37,4 @@ The "falco" example that you can find here (check `falco/docker-compose.yml`), f
 4. Replace datasource references to "hawkular-$TENANT"
 5. Save in `bootstrap/dashboards/` directory
 6. `cd bootstrap`
-7. Rebuild docker image `docker build -t jotak/hawkular-grafana-outofthebox .`
+7. Rebuild docker image `docker build -t jotak/hawkular-grafana-bootstrap .`

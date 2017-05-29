@@ -26,4 +26,4 @@ services:
     image: "jotak/hawkular-grafana-bootstrap:latest"
     environment:
       - TENANT=hawkular
-      - DASHBOARDS=hawkular-self.json
+      - DASHBOARDS=hawkular-self
