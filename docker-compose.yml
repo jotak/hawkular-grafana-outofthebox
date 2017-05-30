@@ -6,8 +6,6 @@ services:
       - "8080:8080"
       - "8443:8443"
       - "9990:9990"
-    links:
-      - hawkular-cassandra
     # volumes:
     #   - /tmp/opt/hawkular/server:/opt/data:Z
     environment:
