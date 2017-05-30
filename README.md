@@ -36,7 +36,7 @@ Examples provided here:
 
 - `cpudemo/docker-compose.yml`: contains a demo application that regularly pushes CPU usage to Hawkular.
 - `hawkular/docker-compose.yml`: contains a Hawkular self-monitoring dashboard. The same dashboard could actually be used with other WildFly applications that use the Hawkular WildFly agent.
-- `falco/docker-compose.yml`: setup a configuration to display _Falco the Hawk_ metrics (game metrics + Vert.X metrics). To try it, you must also get the vert.x app here https://github.com/jotak/falco-demo and run the game once docker-compose is up.
+- Falco the Hawk: it's a game demo, based on Vert.X, that pushes metrics to Hawkular and has its docker-compose file with bootstrap extension. Check here: https://github.com/jotak/falco-demo.
 
 ## Creating dashboard templates
 
