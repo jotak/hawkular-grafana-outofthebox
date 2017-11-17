@@ -1,0 +1,10 @@
+{
+  "name":"hawkular-$TENANT",
+  "type":"hawkular-datasource",
+  "url":"$HAWKULAR_URI",
+  "access":"proxy",
+  "jsonData": {
+    "tenant":"$TENANT",
+    "token":"$HAWKULAR_AUTH_TOKEN"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "name":"hawkular-$TENANT",
   "type":"hawkular-datasource",
-  "url":"http://hawkular:8080/hawkular/metrics",
+  "url":"$HAWKULAR_URI",
   "access":"proxy",
   "basicAuth": true,
   "basicAuthUser":"jdoe",

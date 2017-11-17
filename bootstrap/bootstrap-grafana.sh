@@ -9,9 +9,14 @@ do
 done
 
 echo "Creating hawkular datasource for tenant $TENANT"
-sed -e "s/\$TENANT/$TENANT/g" new-datasource.json > new-datasource-edited.json
+if [ $HAWKULAR_AUTH_TOKEN ]
+then
+  sed -e "s/\$TENANT/$TENANT/g" -e "s|\$HAWKULAR_URI|$HAWKULAR_URI|g" -e "s/\$HAWKULAR_AUTH_TOKEN/$HAWKULAR_AUTH_TOKEN/g" datasource-token.json > datasource-edited.json
+else
+  sed -e "s/\$TENANT/$TENANT/g" -e "s|\$HAWKULAR_URI|$HAWKULAR_URI|g" datasource-basicauth.json > datasource-edited.json
+fi
 
-curl -u admin:admin -H "Content-Type: application/json" -X POST -d @new-datasource-edited.json http://grafana:3000/api/datasources
+curl -u admin:admin -H "Content-Type: application/json" -X POST -d @datasource-edited.json http://grafana:3000/api/datasources
 
 for dashboard in ${DASHBOARDS}; do
     echo "Importing dashboard $dashboard"
