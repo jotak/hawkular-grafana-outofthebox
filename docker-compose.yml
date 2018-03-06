@@ -1,7 +1,7 @@
 version: '2'
 services:
   hawkular:
-    image: "hawkular/hawkular-services:latest"
+    image: "hawkular/hawkular-services:0.40.1.Final"
     ports:
       - "8080:8080"
       - "8443:8443"
@@ -17,7 +17,7 @@ services:
     environment:
       - CASSANDRA_START_RPC=true
   grafana:
-    image: "hawkular/hawkular-grafana-datasource:latest"
+    image: "hawkular/hawkular-grafana-datasource:resolve-vars-annots"
     ports:
       - "3000:3000"
   bootstrap:

@@ -1,7 +1,7 @@
 version: '2'
 services:
   hawkular:
-    image: "hawkular/hawkular-services:latest"
+    image: "hawkular/hawkular-services:0.40.1.Final"
     ports:
       - "8080:8080"
       - "8443:8443"
